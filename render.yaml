@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: questionnaire-backend
+    env: node
+    plan: free
+    buildCommand: npm ci
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      # A définir dans le dashboard Render :
+      # - DATABASE_URL (Postgres Render)
+      # - ALLOWED_ORIGINS (URL de votre front)
+      # - ADMIN_API_KEY (optionnel)
